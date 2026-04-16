@@ -17,7 +17,7 @@ curl -sL https://github.com/Logawinner/Asus-Fan/raw/main/Asus_Fan.tar.gz | tar -
 sudo mv ./Asus_Fan /usr/bin/asus-fan && \
 sudo chmod +x /usr/bin/asus-fan && \
 echo -e "[Desktop Entry]\nType=Application\nName=Asus Fan\nComment=Graph-based Fan Curve Management\nExec=/usr/bin/asus-fan\nIcon=/home/$USER/.local/share/icons/com.logawinner.asus-fan/icon_v1.png\nTerminal=false\nCategories=Settings;HardwareSettings;\nStartupWMClass=com.logawinner.asus-fan" > ~/.local/share/applications/asus-fan.desktop && \
-update-desktop-database ~/.local/share/applications/ && \
+update-desktop-database ~/.local/share/applications/
 ```
 
 # MANUAL BUILD
