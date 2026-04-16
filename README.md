@@ -10,10 +10,10 @@ asusctl (The underlying driver for Asus hardware)
 
 # QUICK INSTALL
 
-If you have downloaded the pre-compiled Asus_Fan binary, run this command from the folder where it was downloaded:
+If you want the pre-compiled Asus_Fan binary, run this command block:
 
 ```
-tar -xvzf Asus_Fan.tar.gz && \
+curl -sL https://github.com/Logawinner/Asus-Fan/raw/main/Asus_Fan.tar.gz | tar -xvz && \
 sudo mv ./Asus_Fan /usr/bin/asus-fan && \
 sudo chmod +x /usr/bin/asus-fan && \
 echo -e "[Desktop Entry]\nType=Application\nName=Asus Fan\nComment=Graph-based Fan Curve Management\nExec=/usr/bin/asus-fan\nIcon=fan\nTerminal=false\nCategories=Settings;HardwareSettings;" > ~/.local/share/applications/asus-fan.desktop && \
@@ -26,8 +26,8 @@ If you prefer to build from source, ensure you have your compiler and GTK3 heade
 Bash
 
 ```
-# 1. Extract the files
-tar -xvzf Asus_Fan.tar.gz && \
+# 1. Download and Extract the files directly from GitHub
+curl -sL https://github.com/Logawinner/Asus-Fan/raw/main/Asus_Fan.tar.gz | tar -xvz && \
 
 # 2. Compile fresh from the extracted source
 g++ -O3 Asus_Fan.cpp -o asus-fan $(pkg-config --cflags --libs gtk+-3.0) -lpthread && \
